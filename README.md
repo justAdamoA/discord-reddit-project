@@ -5,6 +5,7 @@ https://reddit.com/r/Discordjs
 # Install
 
 ```
+nvm use
 nvm install
 npm install
 ```
@@ -14,5 +15,6 @@ npm install
 ```
 cp .env.example .env
 PASTE YOUR TOKEN
+nvm use
 npm start
 ```
