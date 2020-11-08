@@ -1,4 +1,5 @@
 const config = require('../../config');
+const { execute } = require('../commands');
 
 module.exports = (message) => {
   if (!message.content.startsWith(config.commands.prefix)) {
@@ -8,7 +9,5 @@ module.exports = (message) => {
   const args = message.content.slice(1).split(/\s+/);
   const command = args.shift();
 
-  if (command === 'help') {
-    message.channel.send('help message');
-  }
+  execute(command, args, message);
 };
